@@ -3,12 +3,16 @@
     height: 120vh;
     background-image: url('../../images/bg-pattern-intro.svg'), linear-gradient(to right, #ff8f70, #ff3d54);
     background-position: center center;
-    border-bottom-left-radius: 15rem;
+    border-bottom-left-radius: 10rem;
     display: grid;
-    grid-template-rows: 1fr 1.5fr 1.5fr;
+    grid-template-rows: 1fr 2fr 1fr;
 
+    @include respond(phone) {
+        height: 90vh;
+    }
+
+    // Div One
     .navbar {
-        border: solid;
         display: flex;
 
         .divOne {
@@ -20,34 +24,142 @@
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
 
-                #arr {
-                    height: 2rem;
-                    color: #fff;
+                @include respond(phone) {
+                    grid-template-columns: 1fr 1fr;
                 }
 
-                img {
-                    //justify-self: center;
-                    //border: solid;
+                #logo {
                     margin: 0 1.5rem;
+                    cursor: pointer;
+
+                    @include respond(phone) {
+                        margin: 0 1rem;
+                    }
                 }
-    
-                li {
-                    display: grid;
+
+                .list {
+                    display: flex;
                     justify-content: center;
                     align-items: flex-end;
-                    //border: solid;
-                    color: #fff;
-                    list-style: none;
-                    font-family: Overpass, sans-serif;
-                    font-size: 1.9rem;
-                    font-weight: 600;
+
+                    @include respond(phone) {
+                        display: none;
+                    }
+                        
+                    li {
+                        cursor: pointer;
+                        display: grid;
+                        justify-content: center;
+                        align-items: flex-end;
+                        color: #fff;
+                        list-style: none;
+                        font-family: Overpass, sans-serif;
+                        font-size: 1.9rem;
+                        font-weight: 600;
+                        margin: 0 .5rem;
+                    }
+
+                    img {
+                        cursor: pointer;
+                        align-self: center;
+                        margin-top: 1.8rem;
+                    }
                 }
             }
         }
 
         .divTwo {
             width: 40%;
-            border: solid;
+            display: grid;
+            place-items: center;
+            
+            .content {
+                height: 50%;
+                width: 60%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                @include respond(phone) {
+                    justify-content: flex-end;
+                }
+
+                h1 {
+                    color: #ffffff;
+                    font-family: Overpass;
+                    font-size: 1.9rem;
+                    margin: 1.5rem 0 0 0;
+                    cursor: pointer;
+
+                    @include respond(phone) {
+                        display: none;
+                    }
+                }
+
+                button {
+                    height: 5rem;
+                    width: 14rem;
+                    border: none;
+                    border-radius: 5rem;
+                    background: #fff;
+                    margin: 1.5rem 0 0 0;
+                    font-family: Ubuntu;
+                    font-weight: 600;
+                    font-size: 2rem;
+                    color:  #ff3d54;
+                    cursor: pointer;
+
+                    @include respond(phone) {
+                        display: none;
+                    }
+
+                    &:hover {
+                        color: #fff;
+                        background: #ff7a85;
+                    }
+                }
+
+                .bar {
+                    display: none;
+
+                    @include respond(phone) {
+                        display: block;
+                    }
+
+                    img {
+                        cursor: pointer;
+                        height: 3rem;
+                        width: 4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // Div Two
+    .intro {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+
+        .divOne {
+            display: grid;
+            place-items: center;
+
+            h1 {
+                color: #fff;
+                font-size: 7rem;
+                font-family: Overpass;
+                font-weight: 600;
+            }
+
+            p {
+                
+                align-self: flex-start;
+                color: #fff;
+                font-size: 2rem;
+                font-family: Ubuntu;
+                font-weight: 300;
+            }
         }
     }
 }

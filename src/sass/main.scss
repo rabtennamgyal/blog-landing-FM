@@ -1,7 +1,11 @@
 
 // Globals
 @import './global/global';
+@import './global/mixin';
 
 
 // components 
-@import './components/header.scss'
+@import './components/header.scss';
+@import './components/main.scss';
+
+
