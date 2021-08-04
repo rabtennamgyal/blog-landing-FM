@@ -1,7 +1,53 @@
 
-
 .header {
-    height: 40vh;
-    background-image: url('../../images/illustration-editor-desktop.svg');
-    background: #ff7a85;
+    height: 120vh;
+    background-image: url('../../images/bg-pattern-intro.svg'), linear-gradient(to right, #ff8f70, #ff3d54);
+    background-position: center center;
+    border-bottom-left-radius: 15rem;
+    display: grid;
+    grid-template-rows: 1fr 1.5fr 1.5fr;
+
+    .navbar {
+        border: solid;
+        display: flex;
+
+        .divOne {
+            width: 60%;
+            display: grid;
+            place-items: center;
+
+            .content {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+
+                #arr {
+                    height: 2rem;
+                    color: #fff;
+                }
+
+                img {
+                    //justify-self: center;
+                    //border: solid;
+                    margin: 0 1.5rem;
+                }
+    
+                li {
+                    display: grid;
+                    justify-content: center;
+                    align-items: flex-end;
+                    //border: solid;
+                    color: #fff;
+                    list-style: none;
+                    font-family: Overpass, sans-serif;
+                    font-size: 1.9rem;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .divTwo {
+            width: 40%;
+            border: solid;
+        }
+    }
 }
