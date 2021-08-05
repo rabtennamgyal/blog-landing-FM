@@ -217,6 +217,9 @@
 
                     @include respond(phone) {
                         margin: 0;
+                        height: 5rem;
+                        width: 14rem;
+                        font-size: 1.7rem;
                     }
                 }
 
