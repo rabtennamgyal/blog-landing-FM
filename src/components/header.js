@@ -29,6 +29,14 @@ function Header() {
                         <div className='list'>
                             <li>Product</li>
                             <img alt='arrow down' src={arr} />
+
+                            {/* <div className='menuItems'>
+                                <li>Overview</li>
+                                <li>Pricing</li>
+                                <li>Marketplace</li>
+                                <li>Features</li>
+                                <li>Integrations</li>
+                            </div> */}
                         </div>
                         <div className='list'>
                             <li>Company</li>
