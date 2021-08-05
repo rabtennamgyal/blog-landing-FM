@@ -1,26 +1,42 @@
 import logo from '../images/logo.svg'
 import arr from '../images/icon-arrow-light.svg'
 import hamburger from '../images/icon-hamburger.svg'
+import close from '../images/icon-close.svg'
+
+import React, { useState } from 'react';
 
 function Header() {
+    const [Ham, setHam] = useState(true)
+    const [Close, setClose] = useState(false)
+
+    function openClose() {
+        if (Ham === true) {
+            setHam(false)
+            setClose(true)
+        } else {
+            setHam(true)
+            setClose(false)
+        }
+    }
+
     return (
         <div className='header'>
             {/* Div One */}
             <nav className='navbar'>
                 <div className='divOne'>
                     <div className='content'>
-                        <img id='logo' src={logo} />
+                        <img alt='logo' id='logo' src={logo} />
                         <div className='list'>
                             <li>Product</li>
-                            <img src={arr} />
+                            <img alt='arrow down' src={arr} />
                         </div>
                         <div className='list'>
                             <li>Company</li>
-                            <img src={arr} />
+                            <img alt='arrow down' src={arr} />
                         </div>
                         <div className='list'>
                             <li>Connect</li>
-                            <img src={arr} />
+                            <img alt='arrow down' src={arr} />
                         </div>
                     </div>
                 </div>
@@ -34,7 +50,8 @@ function Header() {
                             Sign Up
                         </button>
                         <div className='bar'>
-                            <img src={hamburger} />
+                            {Ham && <img id='hamburger' alt='hamburger icon' src={hamburger} onClick={openClose} />}
+                            {Close && <img id='close' alt='close icon' src={close} onClick={openClose} />}
                         </div>
                     </div>
                 </div>

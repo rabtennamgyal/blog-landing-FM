@@ -126,10 +126,16 @@
                         display: block;
                     }
 
-                    img {
+                    .hamburger {
                         cursor: pointer;
                         height: 2.5rem;
                         width: 4rem;
+                    }
+
+                    .close {
+                        cursor: pointer;
+                        height: 2.5rem;
+                        width: 3.9rem;
                     }
                 }
             }
