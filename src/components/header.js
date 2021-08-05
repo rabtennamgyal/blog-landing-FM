@@ -51,16 +51,23 @@ function Header() {
                         </span>
                     </h1>
                     <p>
-                        Grow your audience and build your online brand
+                        <span>
+                            Grow your audience and build your 
+                        </span>
+                        <span id='brand'>
+                            online brand
+                        </span>
                     </p>
                 </div>
                 <div className='divTwo'>
-                    <button className='start'>
-                        Start for Free
-                    </button>
-                    <button className='learn'>
-                        Learn More
-                    </button>
+                    <div className='content'>
+                        <button className='start'>
+                            Start for Free
+                        </button>
+                        <button className='learn'>
+                            Learn More
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
