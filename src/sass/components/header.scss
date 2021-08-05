@@ -8,7 +8,7 @@
     grid-template-rows: 1fr 2fr 1fr;
 
     @include respond(phone) {
-        height: 80vh;
+        height: 100vh;
     }
 
     // Div One
@@ -93,6 +93,16 @@
 
                     @include respond(phone) {
                         display: none;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 0.7s;
+                    }
+
+                    &:active {
+                        transform: scale(.9);
+                        transition: 0.7s;
                     }
                 }
 
@@ -211,6 +221,7 @@
                 }
 
                 button {
+                    cursor: pointer;
                     margin: 0 2rem;
                     font-weight: 600;
                     font-family: Ubuntu, sans-serif;
@@ -232,12 +243,22 @@
                 .start {
                     color:#ff525d;
                     background: #fff;
+
+                    &:hover {
+                        color: #fff;
+                        background:#ff7a85;
+                    }
                 }
 
                 .learn {
                     border: .1rem solid #fff;
                     color: #ffffff;
                     background: none;
+
+                    &:hover {
+                        color: #ff525d;
+                        background:#ffffff;
+                    }
                 }
             }
         }
