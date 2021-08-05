@@ -43,7 +43,12 @@ function Header() {
             <div className='intro'>
                 <div className='divOne'>
                     <h1>
-                        A modern publishing platform
+                        <span>
+                            A modern
+                        </span>
+                        <span>
+                            publishing platform
+                        </span>
                     </h1>
                     <p>
                         Grow your audience and build your online brand
