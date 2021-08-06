@@ -19,6 +19,48 @@ function Header() {
         }
     }
 
+    const [Menu, setMenu] = useState(false)
+
+    function openCloseMenu() {
+        if (Menu === false) {
+            setMenu(true)
+            const img = document.querySelector('.arrow')
+            img.classList.add('rotateUp')
+        } else {
+            setMenu(false)
+            const img = document.querySelector('.arrow')
+            img.classList.remove('rotateUp')
+        }
+    }
+
+    const [Menu1, setMenu1] = useState(false)
+
+    function openCloseMenu1() {
+        if (Menu1 === false) {
+            setMenu1(true)
+            const img = document.querySelector('.arrow1')
+            img.classList.add('rotateUp')
+        } else {
+            setMenu1(false)
+            const img = document.querySelector('.arrow1')
+            img.classList.remove('rotateUp')
+        }
+    }
+
+    const [Menu2, setMenu2] = useState(false)
+
+    function openCloseMenu2() {
+        if (Menu2 === false) {
+            setMenu2(true)
+            const img = document.querySelector('.arrow2')
+            img.classList.add('rotateUp')
+        } else {
+            setMenu2(false)
+            const img = document.querySelector('.arrow2')
+            img.classList.remove('rotateUp')
+        }
+    }
+
     return (
         <div className='header'>
             {/* Div One */}
@@ -27,24 +69,43 @@ function Header() {
                     <div className='content'>
                         <img alt='logo' id='logo' src={logo} />
                         <div className='list'>
-                            <li>Product</li>
-                            <img alt='arrow down' src={arr} />
+                            <div className='menu'>
+                                <li>Product</li>
+                                <img className='arrow' alt='arrow down' src={arr} onClick={openCloseMenu} />
+                            </div>
 
-                            {/* <div className='menuItems'>
+                            {Menu && <div className='menuItems'>
                                 <li>Overview</li>
                                 <li>Pricing</li>
                                 <li>Marketplace</li>
                                 <li>Features</li>
                                 <li>Integrations</li>
-                            </div> */}
+                            </div>}
                         </div>
                         <div className='list'>
-                            <li>Company</li>
-                            <img alt='arrow down' src={arr} />
+                            <div className='menu'>
+                                <li>Company</li>
+                                <img className='arrow1' alt='arrow down' src={arr} onClick={openCloseMenu1} />
+                            </div>
+                            
+                            {Menu1 && <div className='menuItems'>
+                                <li>About</li>
+                                <li>Teams</li>
+                                <li>Blog</li>
+                                <li>Career</li>
+                            </div>}
                         </div>
                         <div className='list'>
-                            <li>Connect</li>
-                            <img alt='arrow down' src={arr} />
+                            <div className='menu'>
+                                <li>Connect</li>
+                                <img className='arrow2' alt='arrow down' src={arr} onClick={openCloseMenu2} />
+                            </div>
+
+                            {Menu2 && <div className='menuItems'>
+                                <li>Contact</li>
+                                <li>Newsletter</li>
+                                <li>LindedIn</li>
+                            </div>}
                         </div>
                     </div>
                 </div>
@@ -64,6 +125,8 @@ function Header() {
                     </div>
                 </div>
             </nav>
+            
+
             {/* Div Two */}
             <div className='intro'>
                 <div className='divOne'>

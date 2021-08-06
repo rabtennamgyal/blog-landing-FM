@@ -38,31 +38,75 @@
                 }
 
                 .list {
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-end;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    //display: flex;
+                    // justify-content: center;
+                    // align-items: flex-end;
                     
                     @include respond(phone) {
                         display: none;
                     }
 
-                    li {
-                        cursor: pointer;
-                        display: grid;
+                    .menu {
+                        display: flex;
                         justify-content: center;
-                        align-items: flex-end;
-                        color: #fff;
-                        list-style: none;
-                        font-family: Overpass, sans-serif;
-                        font-size: 1.9rem;
-                        font-weight: 600;
-                        margin: 0 .5rem;
+
+                        li {
+                            cursor: pointer;
+                            display: grid;
+                            justify-content: center;
+                            align-items: flex-end;
+                            color: #fff;
+                            list-style: none;
+                            font-family: Overpass, sans-serif;
+                            font-size: 1.9rem;
+                            font-weight: 600;
+                            margin: 0 .5rem;
+                        }
+    
+                        img {
+                            cursor: pointer;
+                            align-self: center;
+                            margin-top: 1.8rem;
+                            transition: ease-in-out .5s;
+                        }
+
+                        .rotateUp {
+                            transform: rotate(180deg);
+                            transition: ease-in-out .5s;
+                        }
                     }
 
-                    img {
-                        cursor: pointer;
-                        align-self: center;
-                        margin-top: 1.8rem;
+                    .menuItems {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        height: 20rem;
+                        width: 15rem;
+                        margin: 5rem 0 0 0;
+                        position: absolute;
+                        z-index: 10;
+                        border: none;
+                        background: #fff;
+                        border: none;
+                        border-radius: 2rem;
+                        padding: 3rem;
+
+                        li {
+                            cursor: pointer;
+                            display: grid;
+                            justify-content: center;
+                            align-items: flex-end;
+                            color: #4b5862;
+                            list-style: none;
+                            font-family: Overpass, sans-serif;
+                            font-size: 1.7rem;
+                            font-weight: 600;
+
+                            &:hover {
+                                color: #000;
+                            }
+                        }
                     }
                 }
             }
@@ -136,6 +180,7 @@
                         display: block;
                     }
 
+                    // change later
                     .hamburger {
                         cursor: pointer;
                         height: 2.5rem;
