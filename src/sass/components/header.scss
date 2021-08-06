@@ -1,3 +1,4 @@
+// 🔮
 
 .header {
     height: 120vh;
@@ -197,26 +198,47 @@
                 }
             }
 
-            .hiddenMenu {
-                display: none;
+            // .hiddenMenu {
+            //     display: none;
 
-                @include respond(phone) {
-                    display: grid;
-                    outline: none;
-                    border: .1rem solid #fff !important;
-                    border-radius: 2rem;
-                    background: #fff;
-                    margin-top: 60rem;
-                    margin-right: 22.5rem;
-                    position: absolute;
-                    z-index: 20;
-                    border: solid;
-                    min-height: 65vh;
-                    max-height: auto;
-                    width: 90vw;
-                    transition: 0.7s ease-in-out;
-                }
-            }
+            //     @include respond(phone) {
+            //         display: grid;
+            //         outline: none;
+            //         border: .1rem solid #fff !important;
+            //         border-radius: 2rem;
+            //         background: #fff;
+            //         margin-top: 60rem;
+            //         margin-right: 22.5rem;
+            //         position: absolute;
+            //         z-index: 20;
+            //         border: solid;
+            //         min-height: 65vh;
+            //         max-height: auto;
+            //         width: 90vw;
+            //         transition: 0.7s ease-in-out;
+            //     }
+            // }
+        }
+    }
+
+    .hiddenMenu {
+        display: none;
+
+        @include respond(phone) {
+            outline: none;
+            border: .1rem solid #fff !important;
+            border-radius: 2rem;
+            background: #fff;
+            margin-top: 15rem;
+            justify-self: center;
+            margin-left: 3rem;
+            position: absolute;
+            z-index: 20;
+            border: solid;
+            min-height: 65vh;
+            max-height: auto;
+            width: 90%;
+            transition: 0.7s ease-in-out;
         }
     }
 

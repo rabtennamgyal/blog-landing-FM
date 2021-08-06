@@ -132,12 +132,17 @@ function Header() {
                         </div>
                     </div>
 
-                    {/* Div Two */}
+                    {/* Div Two
                     <div className='hiddenMenu'>
 
-                    </div>
+                    </div> */}
                 </div>
             </nav>
+
+            {/* Hidden Menu */}
+            <div className='hiddenMenu'>
+                
+            </div>
         
 
             {/* Div Two */}
