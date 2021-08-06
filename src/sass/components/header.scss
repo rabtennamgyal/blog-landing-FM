@@ -116,6 +116,7 @@
             width: 40%;
             display: grid;
             place-items: center;
+            position: relative;
             
             .content {
                 height: 50%;
@@ -181,17 +182,39 @@
                     }
 
                     // change later
-                    .hamburger {
-                        cursor: pointer;
-                        height: 2.5rem;
-                        width: 4rem;
-                    }
 
-                    .close {
-                        cursor: pointer;
-                        height: 2.5rem;
-                        width: 3.9rem;
-                    }
+                    // .hamburger {
+                    //     cursor: pointer;
+                    //     height: 2.5rem;
+                    //     width: 4rem;
+                    // }
+
+                    // .close {
+                    //     cursor: pointer;
+                    //     height: 2.5rem;
+                    //     width: 3.9rem;
+                    // }
+                }
+            }
+
+            .hiddenMenu {
+                display: none;
+
+                @include respond(phone) {
+                    display: grid;
+                    outline: none;
+                    border: .1rem solid #fff !important;
+                    border-radius: 2rem;
+                    background: #fff;
+                    margin-top: 60rem;
+                    margin-right: 22.5rem;
+                    position: absolute;
+                    z-index: 20;
+                    border: solid;
+                    min-height: 65vh;
+                    max-height: auto;
+                    width: 90vw;
+                    transition: 0.7s ease-in-out;
                 }
             }
         }

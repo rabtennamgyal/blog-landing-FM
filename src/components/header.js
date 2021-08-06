@@ -6,6 +6,8 @@ import close from '../images/icon-close.svg'
 import React, { useState } from 'react';
 
 function Header() {
+
+    // These are for Mobile Navbar Menu
     const [Ham, setHam] = useState(true)
     const [Close, setClose] = useState(false)
 
@@ -13,12 +15,17 @@ function Header() {
         if (Ham === true) {
             setHam(false)
             setClose(true)
+            const menu = document.querySelector('.hiddenMenu')
+            menu.style.display = 'block'
         } else {
             setHam(true)
             setClose(false)
+            const menu = document.querySelector('.hiddenMenu')
+            menu.style.display = 'none'
         }
     }
 
+    // These are all relating to the Desktop Navbar Menu
     const [Menu, setMenu] = useState(false)
 
     function openCloseMenu() {
@@ -111,6 +118,7 @@ function Header() {
                 </div>
 
                 <div className='divTwo'>
+                    {/* Div One */}
                     <div className='content'>
                         <h1 className='login'>
                             Login
@@ -123,9 +131,14 @@ function Header() {
                             {Close && <img id='close' alt='close icon' src={close} onClick={openClose} />}
                         </div>
                     </div>
+
+                    {/* Div Two */}
+                    <div className='hiddenMenu'>
+
+                    </div>
                 </div>
             </nav>
-            
+        
 
             {/* Div Two */}
             <div className='intro'>
