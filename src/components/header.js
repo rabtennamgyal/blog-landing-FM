@@ -227,6 +227,15 @@ function Header() {
                         </div>
                     </div>}
                 </div>
+
+                <div className='buttons'>
+                    <button className='btn loginMobile'>
+                        Login
+                    </button>
+                    <button className='btn signMobile'>
+                        Sign Up
+                    </button>
+                </div>
             </div>
         
 
