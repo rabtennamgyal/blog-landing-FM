@@ -242,6 +242,60 @@
             max-height: auto;
             width: 90%;
             transition: 0.7s ease-in-out;
+            grid-template-columns: 1fr;
+            padding: 1rem;
+            flex-direction: column;
+
+            .content {
+                min-height: 5rem;
+                max-height: auto;
+                display: grid;
+                grid-template-columns: 1fr;
+
+                .divOne {
+                    border: solid;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 1rem;
+
+                    li {
+                        font-size: 1.9rem;
+                        font-family: Ubuntu;
+                        color: #4b5862;
+                        list-style: none;
+                    }
+    
+                    img {
+                        margin: .5rem .5rem 0 .5rem;
+                        height: 1rem;
+                    }
+
+                    .rotateUp {
+                        transform: rotate(180deg);
+                        transition: ease-in-out .5s;
+                    }
+                }
+
+                .divTwo {
+                    background: #e7e7e7;
+                    height: 30rem;
+                    border: solid;
+                    display: flex;
+                    flex-direction: column;
+                    transition: 0.7s ease-in-out;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    li {
+                        margin: 3rem;
+                        font-size: 1.9rem;
+                        font-family: Ubuntu;
+                        color: #000000;
+                        list-style: none;
+                    }
+                }
+            }
         }
     }
 

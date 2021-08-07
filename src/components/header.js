@@ -1,5 +1,6 @@
 import logo from '../images/logo.svg'
 import arr from '../images/icon-arrow-light.svg'
+import arr1 from '../images/icon-arrow-dark.svg'
 import hamburger from '../images/icon-hamburger.svg'
 import close from '../images/icon-close.svg'
 
@@ -16,12 +17,26 @@ function Header() {
             setHam(false)
             setClose(true)
             const menu = document.querySelector('.hiddenMenu')
-            menu.style.display = 'block'
+            menu.style.display = 'flex'
         } else {
             setHam(true)
             setClose(false)
             const menu = document.querySelector('.hiddenMenu')
             menu.style.display = 'none'
+        }
+    }
+
+    const [MobileMenu, SetMobileMenu] = useState(false)
+
+    function openCloseMM() {
+        if (MobileMenu === false) {
+            SetMobileMenu(true)
+            const img = document.querySelector('.arrow4')
+            img.classList.add('rotateUp')
+        } else {
+            SetMobileMenu(false)
+            const img = document.querySelector('.arrow4')
+            img.classList.remove('rotateUp')
         }
     }
 
@@ -134,9 +149,41 @@ function Header() {
                 </div>
             </nav>
 
+            
             {/* Hidden Menu */}
             <div className='hiddenMenu'>
-                
+                <div className='content'>
+                    <div className='divOne'>
+                        <li>Product</li>
+                        <img class='arrow4' alt='arrow down' src={arr1} onClick={openCloseMM} />
+                    </div>
+
+                    {MobileMenu && <div className='divTwo'>
+                        <div className='mobileHiddenMenu'>
+                                <li>Overview</li>
+                                <li>Pricing</li>
+                                <li>Marketplace</li>
+                                <li>Features</li>
+                                <li>Integrations</li>
+                        </div>
+                    </div>}
+                </div>
+
+                {/* <div className='content'>
+                    <div className='divOne'>
+                        <li>Company</li>
+                        <img class='hr' alt='arrow down' src={arr1} />
+                    </div>
+
+                    <div className='divTwo'>
+                        {Menu && <div className='menuItems'>
+                                <li>About</li>
+                                <li>Team</li>
+                                <li>Blog</li>
+                                <li>Careers</li>
+                        </div>}
+                    </div>
+                </div> */}
             </div>
         
 
