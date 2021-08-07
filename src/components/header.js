@@ -40,6 +40,34 @@ function Header() {
         }
     }
 
+    const [MobileMenu1, SetMobileMenu1] = useState(false)
+
+    function openCloseMM1() {
+        if (MobileMenu1 === false) {
+            SetMobileMenu1(true)
+            const img = document.querySelector('.arrow5')
+            img.classList.add('rotateUp')
+        } else {
+            SetMobileMenu1(false)
+            const img = document.querySelector('.arrow5')
+            img.classList.remove('rotateUp')
+        }
+    }
+
+    const [MobileMenu2, SetMobileMenu2] = useState(false)
+
+    function openCloseMM2() {
+        if (MobileMenu2 === false) {
+            SetMobileMenu2(true)
+            const img = document.querySelector('.arrow6')
+            img.classList.add('rotateUp')
+        } else {
+            SetMobileMenu2(false)
+            const img = document.querySelector('.arrow6')
+            img.classList.remove('rotateUp')
+        }
+    }
+
     // These are all relating to the Desktop Navbar Menu
     const [Menu, setMenu] = useState(false)
 
@@ -169,21 +197,36 @@ function Header() {
                     </div>}
                 </div>
 
-                {/* <div className='content'>
+                <div className='content'>
                     <div className='divOne'>
                         <li>Company</li>
-                        <img class='hr' alt='arrow down' src={arr1} />
+                        <img class='arrow5' alt='arrow down' src={arr1} onClick={openCloseMM1} />
                     </div>
 
-                    <div className='divTwo'>
-                        {Menu && <div className='menuItems'>
+                    {MobileMenu1 && <div className='divTwo'>
+                        <div className='menuItems'>
                                 <li>About</li>
                                 <li>Team</li>
                                 <li>Blog</li>
                                 <li>Careers</li>
-                        </div>}
+                        </div>
+                    </div>}
+                </div>
+
+                <div className='content'>
+                    <div className='divOne'>
+                        <li>Connect</li>
+                        <img class='arrow6' alt='arrow down' src={arr1} onClick={openCloseMM2} />
                     </div>
-                </div> */}
+
+                    {MobileMenu2 && <div className='divTwo'>
+                        <div className='menuItems'>
+                                <li>Contact</li>
+                                <li>Newsletter</li>
+                                <li>LindedIn</li>
+                        </div>
+                    </div>}
+                </div>
             </div>
         
 
