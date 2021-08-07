@@ -131,11 +131,6 @@ function Header() {
                             {Close && <img id='close' alt='close icon' src={close} onClick={openClose} />}
                         </div>
                     </div>
-
-                    {/* Div Two
-                    <div className='hiddenMenu'>
-
-                    </div> */}
                 </div>
             </nav>
 
