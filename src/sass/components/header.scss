@@ -364,7 +364,10 @@
                 }
 
                 #brand {
+                    margin: 0 .5rem;
+
                     @include respond(phone) {
+                        margin: 0;
                         justify-self: center;
                     }
                 }
