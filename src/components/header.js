@@ -183,7 +183,7 @@ function Header() {
                 <div className='content'>
                     <div className='divOne'>
                         <li>Product</li>
-                        <img class='arrow4' alt='arrow down' src={arr1} onClick={openCloseMM} />
+                        <img className='arrow4' alt='arrow down' src={arr1} onClick={openCloseMM} />
                     </div>
 
                     {MobileMenu && <div className='divTwo'>
@@ -200,7 +200,7 @@ function Header() {
                 <div className='content'>
                     <div className='divOne'>
                         <li>Company</li>
-                        <img class='arrow5' alt='arrow down' src={arr1} onClick={openCloseMM1} />
+                        <img className='arrow5' alt='arrow down' src={arr1} onClick={openCloseMM1} />
                     </div>
 
                     {MobileMenu1 && <div className='divTwo'>
@@ -216,7 +216,7 @@ function Header() {
                 <div className='content'>
                     <div className='divOne'>
                         <li>Connect</li>
-                        <img class='arrow6' alt='arrow down' src={arr1} onClick={openCloseMM2} />
+                        <img className='arrow6' alt='arrow down' src={arr1} onClick={openCloseMM2} />
                     </div>
 
                     {MobileMenu2 && <div className='divTwo'>

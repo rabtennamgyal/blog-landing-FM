@@ -23,20 +23,23 @@
             display: grid;
             justify-content: center;
             align-items: flex-end;
-            margin-top: 0;
-            padding: 0 3rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            //padding: 0 3rem;
             position: relative;
             font-size: 2.8rem;
         }
     }
 
     .divOne {
+        border: solid;
         display: grid;
         justify-content: right;
         align-items: flex-end;
 
         @include respond(phone) {
-            margin-top: -10rem;
+            //margin-top: -10rem;
+            margin-top: -2rem;
             justify-content: center;
             align-items: center;
         }
@@ -50,6 +53,7 @@
             @include respond(phone) {
                 height: 100%;
                 margin-bottom: 0;
+                margin-top: 5rem;
             }
 
             .box {
@@ -120,7 +124,7 @@
         background-position:  center left 140px;
 
         @include respond(phone) {
-            margin-top: -5rem;
+            //margin-top: -5rem;
             grid-row: 2 / 3;
             height: 50vh;
             background-image: url('../../images/illustration-editor-mobile.svg');
