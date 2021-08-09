@@ -46,7 +46,6 @@
             display: grid;
             grid-template-columns: 1fr;
             margin-bottom: 5rem;
-            border: solid;
 
             @include respond(phone) {
                 height: 100%;
@@ -60,7 +59,6 @@
 
                 @include respond(phone) {
                     padding: 0rem;
-                    border: solid;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -80,7 +78,6 @@
 
                     @include respond(phone) {
                         justify-self: center;
-                        border: solid;
                         font-size: 2rem;
                         display: grid;
                         grid-template-columns: 1fr;
@@ -105,7 +102,6 @@
                     line-height: 3rem;
 
                     @include respond(phone) {
-                        border: solid;
                         font-size: 1rem;
                         margin-top: 0;
                         margin-top: 0;;
