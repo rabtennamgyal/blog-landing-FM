@@ -13,8 +13,12 @@
         margin-top: 30rem;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
+
+
         // background-image: url('../../images/bg-pattern-circles.svg'), linear-gradient(to right, #2c2d3f, #3f4164);
         // background-repeat: no-repeat;
+        // background-size: 70rem;
+        // background-position: top -35rem center;
     }
 
     img {
@@ -41,7 +45,7 @@
 
         @include respond(phone) {
             background-image: none;
-            // background: #2c2d3f;
+            background: #3f4164;
             //background: linear-gradient(to bottom, #2c2d3f, #3f4164);
         }
     }
@@ -53,6 +57,7 @@
 
         @include respond(phone) {
             grid-row: 2 / 3;
+            background: #3f4164;
         }
 
         .content {
@@ -80,7 +85,7 @@
                 @include respond(phone) {
                     padding: .1rem;
                     width: 60%;
-                    //margin-left: 1rem;
+                    margin-bottom: 1.3rem;
                 }
             }
     
