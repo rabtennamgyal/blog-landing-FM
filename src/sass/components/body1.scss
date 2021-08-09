@@ -5,8 +5,9 @@
     position: relative;
 
     @include respond(phone) {
-        height: 100vh;
+        height: 130vh;
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4fr 4fr;
     }
 
     h1 {
@@ -19,6 +20,11 @@
         color: #1f3f5b;
 
         @include respond(phone) {
+            display: grid;
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: 0;
+            padding: 0 3rem;
             position: relative;
             font-size: 2.8rem;
         }
@@ -29,16 +35,37 @@
         justify-content: right;
         align-items: flex-end;
 
+        @include respond(phone) {
+            margin-top: -10rem;
+            justify-content: center;
+            align-items: center;
+        }
+
         .content {
             height: 70%;
             display: grid;
             grid-template-columns: 1fr;
             margin-bottom: 5rem;
+            border: solid;
+
+            @include respond(phone) {
+                height: 100%;
+                margin-bottom: 0;
+            }
 
             .box {
                 padding: 1rem;
                 display: grid;
                 place-items: center;
+
+                @include respond(phone) {
+                    padding: 0rem;
+                    border: solid;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
 
                 h2 {
                     justify-self: start;
@@ -46,6 +73,26 @@
                     color: #1f3f5b;
                     font-size: 2.3rem;
                     font-weight: 600;
+
+                    span {
+                        margin: 0 .3rem;
+                    }
+
+                    @include respond(phone) {
+                        justify-self: center;
+                        border: solid;
+                        font-size: 2rem;
+                        display: grid;
+                        grid-template-columns: 1fr;
+
+                        #introMobile {
+                            margin-left: 1rem;
+                        }
+
+                        #manageMobile {
+                            margin-left: 1rem;
+                        }
+                    }
                 }
 
                 p {
@@ -56,6 +103,13 @@
                     display: grid;
                     grid-template-rows: repeat(4, 1fr);
                     line-height: 3rem;
+
+                    @include respond(phone) {
+                        border: solid;
+                        font-size: 1rem;
+                        margin-top: 0;
+                        margin-top: 0;;
+                    }
                 }
             }
         }
@@ -68,5 +122,15 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position:  center left 140px;
+
+        @include respond(phone) {
+            margin-top: -5rem;
+            grid-row: 2 / 3;
+            height: 50vh;
+            background-image: url('../../images/illustration-editor-mobile.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position:  center;
+        }
     }
 }

@@ -9,7 +9,12 @@ function body1() {
                 <div className='content'>
                     <div className='box one'>
                         <h2>
-                            Introducing an extensible editor
+                            <span id='introMobile'>
+                                Introducing an 
+                            </span>
+                            <span>
+                                extensible editor
+                            </span>
                         </h2>
                         <p>
                             <span>
@@ -32,7 +37,12 @@ function body1() {
 
                     <div className='box one'>
                         <h2>
-                            Robust content management
+                            <span>
+                                Robust content
+                            </span> 
+                            <span id='manageMobile'>
+                                management
+                            </span>
                         </h2>
                         <p>
                             <span>
