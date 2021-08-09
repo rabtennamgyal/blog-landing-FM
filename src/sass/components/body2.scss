@@ -1,4 +1,48 @@
 .body2 {
-    height: 130vh;
-    background: white;
+    margin-top: 3rem;
+    height: 60vh;
+    border-top-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    background: linear-gradient(to right, #2c2d3f, #3f4164);
+    position: relative;
+
+    @include respond(phone) {
+        height: 100vh;
+        margin-top: 30rem;
+        border: solid;
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        position: absolute;
+        top: -7rem;
+        left: 5rem;
+
+        @include respond(phone) {
+            justify-self: center;
+            position: relative;
+            height: 40rem;
+            top: -20rem;
+            left: 0;
+        }
+    }
+
+    .divOne {
+        display: grid;
+        justify-content: end;
+        background-image: url('../../images/bg-pattern-circles.svg');
+        background-size: 90rem 100rem;
+        background-repeat: no-repeat;
+        background-position: bottom -10rem right 1rem;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    .divTwo {
+
+    }
 }
