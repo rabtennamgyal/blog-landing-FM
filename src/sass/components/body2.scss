@@ -9,10 +9,12 @@
     position: relative;
 
     @include respond(phone) {
-        height: 100vh;
+        height: 90vh;
         margin-top: 30rem;
-        border: solid;
         grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        // background-image: url('../../images/bg-pattern-circles.svg'), linear-gradient(to right, #2c2d3f, #3f4164);
+        // background-repeat: no-repeat;
     }
 
     img {
@@ -38,11 +40,63 @@
         background-position: bottom -10rem right 1rem;
 
         @include respond(phone) {
-            display: none;
+            background-image: none;
+            // background: #2c2d3f;
+            //background: linear-gradient(to bottom, #2c2d3f, #3f4164);
         }
     }
 
     .divTwo {
+        display: grid;
+        align-items: center;
+        position: relative;
 
+        @include respond(phone) {
+            grid-row: 2 / 3;
+        }
+
+        .content {
+            position: absolute;
+            left: -5rem;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include respond(phone) {
+                position: relative;
+                left: 0;
+                height: 100%;
+                margin-top: -25rem;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 3rem;
+                font-family: Ubuntu, sans-serif;
+                font-weight: 400;
+                color: #fff;
+
+                @include respond(phone) {
+                    padding: .1rem;
+                    width: 60%;
+                    //margin-left: 1rem;
+                }
+            }
+    
+            p {
+                padding: 1.5rem 3rem 0 0;
+                color: #fff;
+                font-size: 1.6rem;
+                font-family: Ubuntu, sans-serif;
+                color: #c8c8cb;
+                line-height: 3rem;
+
+                @include respond(phone) {
+                    padding: 1rem 2.5rem 1rem 2.5rem;
+                    font-size: 1.8rem;
+                }
+            }
+        }
     }
 }
