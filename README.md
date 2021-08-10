@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-layout-build-using-react-and-sass-Vzh0Hf1_F)
+- Live Site URL: [Add live site URL here](https://blog-fem.herokuapp.com/)
 
 ## My process
 
