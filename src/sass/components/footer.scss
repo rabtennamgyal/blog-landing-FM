@@ -1,0 +1,69 @@
+.footer {
+    margin-top: 5rem;
+    height: 55vh;
+    background: #25252d;
+    border-top-right-radius: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+        height: 100vh;
+    }
+
+    .divOne {
+        display: grid;
+        justify-content: center;
+        margin-top: 6rem;
+    }
+
+    .divTwo {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            @include respond(phone) {
+                align-items: center;
+            }
+
+            h1 {
+                color: #ffffff;
+                font-family: ubuntu;
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin: 1rem 0 1rem 3rem;
+
+                @include respond(phone) {
+                    font-size: 1.7rem;
+                    margin: .5rem 0 1rem 0;
+                }
+            }
+
+            li {
+                font-size: 1.3rem;
+                list-style: none;
+                color:  #c8c8cb;
+                font-family: ubuntu;
+                margin: 1rem 0 1rem 3rem;
+
+                @include respond(phone) {
+                    font-size: 1.4;
+                    margin: .5rem 0 1rem 0;
+                }
+            }
+
+            .foo {
+                color: #25252d;
+            }
+        }
+    }
+}
