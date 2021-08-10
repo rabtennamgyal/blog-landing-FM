@@ -45,8 +45,6 @@
 
         @include respond(phone) {
             background-image: none;
-            background: #3f4164;
-            //background: linear-gradient(to bottom, #2c2d3f, #3f4164);
         }
     }
 
@@ -57,7 +55,6 @@
 
         @include respond(phone) {
             grid-row: 2 / 3;
-            background: #3f4164;
         }
 
         .content {

@@ -1,0 +1,114 @@
+.body3 {
+    height: 140vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include respond(phone) {
+        height: 120vh;
+        grid-template-columns: 1fr;
+        //rid-template-rows: 1fr .8fr;
+    }
+
+    .divOne {
+        display: grid;
+        align-items: flex-end;
+
+        @include respond(phone) {
+            align-items: center;
+            background-size: contain;
+            background-image: url('../../images/illustration-laptop-mobile.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .content {
+            display: grid;
+            align-items: center;
+            height: 90%;
+
+            @include respond(phone) {
+                height: 100%;
+            }
+
+            .imgBox {
+                height: 90%;
+                background-image: url('../../images/illustration-laptop-desktop.svg');
+                background-repeat: no-repeat;
+                background-position: right 5rem center;
+                background-size: cover;
+
+                @include respond(phone) {
+                    height: 100%;
+                    background-image: none;
+                }
+            }
+        }
+    }
+
+    .divTwo {
+        display: grid;
+        align-items: center;
+
+        .content {
+            height: 80%;
+            display: grid;
+            align-items: center;
+
+            @include respond(phone) {
+                height: 100%;
+            }
+
+            .textBox {
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                @include respond(phone) {
+                    height: 100%;
+                }
+
+                .divOne, .divTwo {
+                    height: 50%;
+                }
+
+                .divOne {
+                    background-image: none;
+                    margin-bottom: 3rem;
+
+                    @include respond(phone) {
+                        margin-bottom: 0;
+                    }
+                }
+
+                h1 {
+                    font-size: 2.5rem;
+                    font-family: Ubuntu, sans-serif;
+                    font-weight: 500;
+                    color:  #1f3f5b;
+
+                    @include respond(phone) {
+                        font-size: 3rem;
+                        justify-self: center;
+                    }
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    font-family: Ubuntu, sans-serif;
+                    font-weight: 500;
+                    color: #5f6e79;
+                    line-height: 3rem;
+                    padding: 1rem 1rem 0 0;
+
+                    @include respond(phone) {
+                        font-size: 1.6rem;
+                        justify-self: center;
+                        line-height: 2.2rem;
+                        padding: 0 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
