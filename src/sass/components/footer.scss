@@ -8,6 +8,7 @@
 
     @include respond(phone) {
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr;
         height: 130vh;
     }
 
@@ -17,7 +18,8 @@
         margin-top: 6rem;
 
         @include respond(phone) {
-            margin-bottom: 3rem;
+            margin-top: 0;
+            align-items: center;
         }
     }
 
