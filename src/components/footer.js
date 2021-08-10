@@ -8,7 +8,7 @@ function Footer() {
             </div>
 
             <div className='divTwo'>
-                <div className='box'>
+                <div className='box one'>
                     <h1>
                         Product
                     </h1>
@@ -30,7 +30,7 @@ function Footer() {
                     </li>
                 </div>
 
-                <div className='box'>
+                <div className='box two'>
                     <h1>
                         Company
                     </h1>
@@ -47,12 +47,9 @@ function Footer() {
                     <li>
                         Careers
                     </li>
-                    <li className='foo'>
-                        foo
-                    </li>
                 </div>
 
-                <div className='box'>
+                <div className='box three'>
                     <h1>
                         Connect
                     </h1>
@@ -65,12 +62,6 @@ function Footer() {
                     </li>
                     <li>
                         LinkedIn
-                    </li>
-                    <li className='foo'>
-                        foo
-                    </li>
-                    <li className='foo'>
-                        foo
                     </li>
                 </div>
             </div>
